@@ -1,0 +1,46 @@
+<--Rent Item and Return Rented Item Use Case-->
+
+Ator Primário: Funcionário
+
+Interessados e Interesses:  
+- Funcionário: Quer realizar a venda o mais rápido e eficientemente possível.
+- Cliente: Pretende alugar ou retornar um item de forma simples, rápida e eficiente.
+- Gerente: Quer que as vendas se processem corretamente acima de tudo. Pretende que as multas sejas aplicadas corretamente e que o processo
+decorra sem erros.
+
+Pré-Condições: O funcionário está identificado e o sistema pronto a utilizar.
+
+Pós-Condições(Em caso de sucesso): A venda é registada e processada, o item é alugado ou retornado. Se houverem multas a serem aplicadas, 
+são aplicadas corretamente. Inventário e registo de itens é atualizado corretamente.
+
+Cenário Principal de Sucesso:
+1. O cliente chega à loja para alugar/retornar um item.
+2. O funcionário abre uma nova venda.
+3. O funcionário introduz o identificador do item a ser alugado/retornado.
+4. O sistema apresenta as informações do item e o seu preço de aluguer.
+5. O cliente paga o aluguer e a venda é registada e processada.
+6. O sistema atualiza o inventário e o registo de itens.
+7. O sistema retorna uma fatura.
+8. O cliente sai da loja com o item (ou nada, no caso de retorno).
+
+
+Extensões:
+4a. No caso do cliente retornar um item:
+    1. O sistema apresenta as informações do item, nomeadamente, a data de validade do aluguer.
+    2. Se o item for retornado dentro do prazo de validade do aluguer, este é retornado e o retorno processado.
+        2a. Se o item for retornado fora do prazo de aluguer, são aplicadas multas consoante o tempo decorrido do fim do prazo de aluguer.
+
+*a. No caso do sistema falhar em qualquer altura:
+    1. O funcionário reinicia o sistema, e tenta restaurar a última venda aberta/registada.
+    2. O sistema reconstrói o último estado.
+        2a. O sistema detecta um erro na restauração do estado, e notifica o funcionário. Este introduz uma nova venda.
+
+
+Requisitos Especiais:
+- Ecrân táctil, com o texto visível a 1m de distância.
+- Leitor de cartões com uma resposta de autorização de crédito de menos de 30 segundos 90% das vezes.
+
+
+Tecnologias e Lista de Variações de Dados:
+3a. O identificador de item pode ser lido por código de barras (no caso de aluguer) ou introduzido manualmente por teclado (no caso de retorno).
+5a. A leitura de dados de cartão é feita atravaés de leitor de cartões.

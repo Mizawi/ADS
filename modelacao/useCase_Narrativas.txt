@@ -1,0 +1,17 @@
+-Rent Item-Narrativa
+
+Um cliente entra na loja e consulta a lista de itens disponíveis para alugar. Depois de escolher o item que quer alugar, o item é 
+preparado para ser alugado. O cliente efetua o pagamento, e depois deste ser processado, o item é entregue ao cliente.
+
+
+-Return Rented Item (SEM MULTA)- Narrativa
+
+Um cliente entra na loja com o item a ser retornado. São verificadas as informações do item, nomeadamente: A sua data de validade e 
+se já foi vencida, caso em que é verificado o tipo de limite a ser pago (soft ou hard), o seu id e a informação do cliente que o alugou.
+No final, o retorno é processado e o item é armazenado.
+
+-Return Rented Item (COM MULTA)- Narrativa
+
+Um cliente entra na na loja para retornar o item. Depois de verificadas as informações do item, a multa é aplicada consoante o tempo 
+passado para além do prazo de aluguer. A multa é apresentada ao cliente, o cliente paga a multa. Depois da multa paga, o cliente
+retorna o item, e este é armazenado.
