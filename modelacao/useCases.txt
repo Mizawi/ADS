@@ -15,7 +15,7 @@ são aplicadas corretamente. Inventário e registo de itens é atualizado corret
 
 Cenário Principal de Sucesso:
 1. O cliente chega à loja para alugar/retornar um item.
-2. O funcionário abre uma nova venda.
+2. O funcionário abre um novo aluguer.
 3. O funcionário introduz o identificador do item a ser alugado/retornado.
 4. O sistema apresenta as informações do item e o seu preço de aluguer.
 5. O cliente paga o aluguer e a venda é registada e processada.
