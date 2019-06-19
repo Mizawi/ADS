@@ -1,2 +1,4 @@
 # ADS
-Projeto de ADS 2º Ano
+Projeto de ADS
+
+POS + Modelação e Desenho (Diagramas)
